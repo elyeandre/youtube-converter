@@ -1,0 +1,66 @@
+<!-- Coded by Jerickson Mayor -->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Free YouTube Downloader: Convert YouTube videos to MP3 and MP4 formats easily. Download your favorite music and videos for offline enjoyment." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <title>YouTube Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="video-container">
+      <div id="header">YouTube Converter</div>
+      <!-- Input and Convert Button -->
+      <div class="input-container" id="input-container">
+        <div class="custom-dropdown" id="customDropdown" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+          <div class="selected-option" id="selectedOption">MP4</div>
+          <div class="dropdown-options" id="dropdownOptions">
+            <div class="option" data-value="mp3">MP4</div>
+            <div class="option" data-value="mp4">MP3</div>
+            <!-- Add more options as needed -->
+          </div>
+        </div>
+        <input type="text" id="videoURL" placeholder="Enter YouTube Video URL" />
+        <button class="convert-btn" onclick="convert()">Convert</button>
+      </div>
+
+      <div class="error-message" id="errorMessage"></div>
+
+      <!-- Thumbnails -->
+      <div class="thumbnail-container">
+        <div class="thumbnail">
+          <a target="_blank">
+            <img width="320" height="180" />
+          </a>
+          <div class="title"></div>
+        </div>
+      </div>
+      <div class="loading-container" style="display: none">
+        <div class="loading"></div>
+      </div>
+      <div class="formats-container"></div>
+      <!-- Convert Again Button -->
+      <button class="convert-btn" id="convert-again" onclick="convertAgain()" style="display: none">
+        Convert Again
+      </button>
+      <div id="made-with-love">
+        Made with
+        <span style="color: red">❤️</span>
+        by Jerickson Mayor
+        <!-- Buy Me a Coffee button -->
+        <div id="buy-me-coffee">
+          <a href="https://www.buymeacoffee.com/elyeandre" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
