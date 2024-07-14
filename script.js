@@ -3,7 +3,7 @@
  */
 let shouldContinueProcessing = true;
 function convert() {
-  const APIKEY = '<YOUR_API_KEY>'; // Get the API key here --> https://rapidapi.com/hub
+  const APIKEY = 'f6a5076aaamsh068e5bef20f4c60p125dcbjsn23685700616b'; // Get the API key here --> https://rapidapi.com/hub
   const videoURL = document.getElementById('videoURL').value;
   const videoID = extractVideoId(videoURL);
   let formatSelected = document.querySelector('.selected-option').textContent.toLowerCase();
